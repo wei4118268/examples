@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>google地图api测试test1</title>
+</head>
+<style>
+    #google{
+        width : 500px;
+        height : 380px;
+    }
+</style>
+<script src="http://ditu.google.cn/maps/api/js?key=abcde&senser=false"></script>
+<script>
+    function init(){
+        var mapProp = {
+            center : new google.maps.LatLng(51.508742, -0.120850),
+            zoom : 5,
+            mapTypeId : google.maps.MapTypeId.ROADMAP
+        };
+        
+        var map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+    }
+
+    google.maps.event.addDomListener(window, 'load', function(){
+        init();
+    });
+</script>
+<body>
+    <div id="googleMap">
+</body>
+</html>
